@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <title>Virtual Keyboard</title>
+</head>
+<body>
+  <div class="output-text"></div>
+  <div class="keyboard">
+    <div>
+      <button class="button-keyboard">
+        <span class="ru">
+          <span class="case-down" id="ё">ё</span>
+          <span class="case-up hidden" id="Ё">Ё</span>
+          <span class="caps-lock hidden" id="Ё">Ё</span>
+        </span>
+        <span class="eng hidden">
+          <span class="case-down" id="§">§</span>
+          <span class="case-up hidden" id="±">±</span>
+          <span class="caps-lock hidden" id="±">±</span>
+        </span>
+      </button>
+      <button class="button-keyboard">
+        <span class="ru">
+          <span class="case-down" id="1">1</span>
+          <span class="case-up hidden" id="!">!</span>
+          <span class="caps-lock hidden" id="!">!</span>
+        </span>
+        <span class="eng hidden">
+          <span class="case-down" id="1">1</span>
+          <span class="case-up hidden" id="!">!</span>
+          <span class="caps-lock hidden" id="!">!</span>
+        </span>
+      </button>
+      <button class="button-keyboard">
+        <span class="ru">
+          <span class="case-down" id="2">2</span>
+          <span class="case-up hidden" id="&quot">&quot</span>
+          <span class="caps-lock hidden" id="&quot">&quot</span>
+        </span>
+        <span class="eng hidden">
+          <span class="case-down" id="1">1</span>
+          <span class="case-up hidden" id="!">!</span>
+          <span class="caps-lock hidden" id="!">!</span>
+        </span>
+      </button>
+      <button class="button-keyboard">3</button>
+      <button class="button-keyboard">4</button>
+      <button class="button-keyboard">5</button>
+      <button class="button-keyboard">6</button>
+      <button class="button-keyboard">7</button>
+      <button class="button-keyboard">8</button>
+      <button class="button-keyboard">9</button>
+      <button class="button-keyboard">0</button>
+      <button class="button-keyboard">-</button>
+      <button class="button-keyboard">=</button>
+      <button class="button-keyboard backspace">&#9003;</button>
+    </div>
+    <div>
+      <button class="button-keyboard">&#8594;</button>
+      <button class="button-keyboard">й</button>
+      <button class="button-keyboard">ц</button>
+      <button class="button-keyboard">у</button>
+      <button class="button-keyboard">к</button>
+      <button class="button-keyboard">е</button>
+      <button class="button-keyboard">н</button>
+      <button class="button-keyboard">г</button>
+      <button class="button-keyboard">ш</button>
+      <button class="button-keyboard">щ</button>
+      <button class="button-keyboard">з</button>
+      <button class="button-keyboard">х</button>
+      <button class="button-keyboard">ъ</button>
+      <button class="button-keyboard">&#8629;</button>
+    </div>
+    <div>
+      <button class="button-keyboard caps-lock">Caps lock</button>
+      <button class="button-keyboard">ф</button>
+      <button class="button-keyboard">ы</button>
+      <button class="button-keyboard">в</button>
+      <button class="button-keyboard">а</button>
+      <button class="button-keyboard">п</button>
+      <button class="button-keyboard">р</button>
+      <button class="button-keyboard">о</button>
+      <button class="button-keyboard">л</button>
+      <button class="button-keyboard">д</button>
+      <button class="button-keyboard">ж</button>
+      <button class="button-keyboard">э</button>
+      <button class="button-keyboard">\</button>
+    </div>
+    <div> 
+      <button class="button-keyboard">&#8657;</button>
+      <button class="button-keyboard">]</button>
+      <button class="button-keyboard">я</button>
+      <button class="button-keyboard">ч</button>
+      <button class="button-keyboard">с</button>
+      <button class="button-keyboard">м</button>
+      <button class="button-keyboard">и</button>
+      <button class="button-keyboard">т</button>
+      <button class="button-keyboard">ь</button>
+      <button class="button-keyboard">б</button>
+      <button class="button-keyboard">ю</button>
+      <button class="button-keyboard">.</button>
+      <button class="button-keyboard right-shift">&#8657;</button>
+    </div>
+    <div class="bottom-row">
+      <button class="button-keyboard fn-button">fn</button>
+      <button class="button-keyboard control-button">control</button>
+      <button class="button-keyboard option-button">option</button>
+      <button class="button-keyboard command-button">command</button>
+      <button class="button-keyboard space-button"></button>
+      <button class="button-keyboard command-button">command</button>
+      <button class="button-keyboard option-button">option</button>
+      <button class="button-keyboard left-arrow"></button>
+      <div class="flex-column">
+        <button class="button-keyboard up-arrow"></button>
+        <button class="button-keyboard down-arrow"></button>
+      </div>
+      <button class="button-keyboard right-arrow"></button>
+    </div>
+  </div>
+
+  <script src="./src/main.js"></script>
+</body>
+</html>
