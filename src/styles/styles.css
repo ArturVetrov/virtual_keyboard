@@ -60,12 +60,12 @@ body {
   padding: 1px;
 }
 
-.caps-lock,
+.caps-lock-button,
 .right-shift {
   width: 52px;
 }
 
-.caps-lock,
+.caps-lock-button,
 .fn-button,
 .control-button,
 .option-button,
