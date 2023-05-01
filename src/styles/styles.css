@@ -2,6 +2,16 @@ body {
   background-color: #e8e8e8;
 }
 
+span {
+  width: 100%;
+  display: block;
+  min-height: 22px;
+}
+
+.flex {
+  display: flex;
+}
+
 .hidden {
   /* visibility:hidden */
   display: none;
@@ -12,13 +22,17 @@ body {
   height: 300px;
   margin: 0 auto;
   border: 1px solid;
+  display: block;
+  margin: 0 auto;
 }
 
 .keyboard {
   width: 389px;
-  margin: 0 auto;
+  margin: 67px auto;
   background-color: #808080;
   border: 3px solid #808080;
+  transform: scale(1.8);
+  caret-color: transparent;
 }
 
 .flex-column {
@@ -32,17 +46,20 @@ body {
   border: 0.5px solid;
   border-radius: 2px;
   background-color: #e6e6e6;
-  margin-top: 2px;
+  margin: 2px;
   cursor: pointer;
+  padding: 0;
+  text-align: center;
 }
 
 .button-keyboard:hover {
-  border: 2px solid #665e61;
+  background-color: #656565;
+  color: #e6e6e6;
   transition: 0.3s;
 }
 
 .button-keyboard:active {
-  background-color: #333333;
+  background-color: #464646;
   color: #fff;
   transform: scale(0.85);
   box-shadow: -1px 5px 38px 19px rgba(255, 255, 255, 0.62);
