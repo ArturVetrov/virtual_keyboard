@@ -5,9 +5,32 @@ const CapsLock = document.querySelectorAll('.caps-lock');
 const RuKeyboard = document.querySelectorAll('.ru');
 const EngKeyboard = document.querySelectorAll('.eng');
 
+function InnerText(event, button) {
+  const arr = ['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (event.key === arr[i]) {
+      return;
+    }
+  }
+  console.log(event.key);
+  const ActiveSpan = button.parentNode.parentNode.getElementsByTagName('span');
+  const IndexArray = [];
+  for (let i = 0; i < ActiveSpan.length; i += 1) {
+    IndexArray.push(!ActiveSpan[i].classList.contains('hidden'));
+  }
+  if (!ActiveSpan[0].classList.contains('hidden')) {
+    const Index = IndexArray.indexOf(true, 1);
+    Output.innerHTML += ActiveSpan[Index].innerHTML;
+  } else if (ActiveSpan[0].classList.contains('hidden')) {
+    const Index = IndexArray.indexOf(true, 5);
+    Output.innerHTML += ActiveSpan[Index].innerHTML;
+  }
+}
+
 function ShiftKey(event) {
   if (event.shiftKey) {
     for (let i = 0; i < CaseUp.length; i += 1) {
+      CaseUp[i].classList.remove('hidden');
       CaseUp[i].classList.remove('hidden');
       CaseDown[i].classList.add('hidden');
       CapsLock[i].classList.add('hidden');
@@ -59,6 +82,8 @@ document.addEventListener('keydown', (event) => {
   ShiftKey(event);
   SelectLanguage(event);
   CapsKey(event);
+  InnerText(event, button);
+  /* Output.innerHTML += button.innerHTML;  */
 });
 
 document.addEventListener('keyup', (event) => {
