@@ -21,9 +21,10 @@ span {
   width: 70vw;
   height: 300px;
   margin: 0 auto;
-  border: 1px solid;
+  border: 3px solid;
   display: block;
-  margin: 0 auto;
+  padding: 7px;
+  background-color: #fbfbfb;
 }
 
 .keyboard {
@@ -63,6 +64,7 @@ span {
   color: #fff;
   transform: scale(0.85);
   box-shadow: -1px 5px 38px 19px rgba(255, 255, 255, 0.62);
+  transition: 0.3s;
 }
 
 .active{
@@ -70,6 +72,7 @@ span {
   color: #fff;
   transform: scale(0.85);
   box-shadow: -1px 5px 38px 19px rgba(255, 255, 255, 0.62);
+  transition: 0.3s;
 }
 
 
@@ -165,4 +168,10 @@ span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 8px;
+}
+
+.down-text {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
 }

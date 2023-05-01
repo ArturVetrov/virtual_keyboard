@@ -1,4 +1,9 @@
-const Output = document.querySelector('.output-text');
+import Keyboard from './keyboard.js';
+
+const Body = document.getElementsByTagName('body');
+Body[0].innerHTML += Keyboard;
+
+
 const CaseUp = document.querySelectorAll('.case-up');
 const CaseDown = document.querySelectorAll('.case-down');
 const CapsLock = document.querySelectorAll('.caps-lock');
@@ -8,9 +13,10 @@ const EngKeyboard = document.querySelectorAll('.eng');
 const SetLanguage = window.localStorage.getItem('language');
 
 function InnerText(event, button) {
-  const arr = ['Shift', 'Control', 'Alt', 'Meta', 'CapsLock'];
+  let Output = document.querySelector('.output-text');
+  const arr = ['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'ShiftLeft', 'ShiftRight', 'fn-button'];
   for (let i = 0; i < arr.length; i += 1) {
-    if (event.key === arr[i]) {
+    if (event.key === arr[i] || event === arr[i]) {
       return;
     }
   }
@@ -19,17 +25,17 @@ function InnerText(event, button) {
     return;
   }
   if (event.code === 'Enter' || event === 'Enter') {
-    Output.innerHTML += '\n';
+    Output.innerHTML += '<br>';
     return;
   }
   if (event.code === 'Tab' || event === 'Tab') {
     Output.innerHTML += '    ';
     return;
   }
-  /* if (event.code === 'Backspace' || event === 'Backspace') {
-    Output.innerHTML += Output.slice(0, -1);
+  if (event.code === 'Backspace' || event === 'Backspace') {
+    Output.innerHTML = Output.innerHTML.slice(0, -1);
     return;
-  } */
+  }
   const ActiveSpan = button.parentNode.parentNode.getElementsByTagName('span');
   const IndexArray = [];
   for (let i = 0; i < ActiveSpan.length; i += 1) {
@@ -45,13 +51,13 @@ function InnerText(event, button) {
 }
 
 function ShiftKey(event) {
-  if (event.shiftKey) {
+  if (event.shiftKey || event === 'down') {
     for (let i = 0; i < CaseUp.length; i += 1) {
       CaseUp[i].classList.remove('hidden');
       CaseDown[i].classList.add('hidden');
       CapsLock[i].classList.add('hidden');
     }
-  } else if (!event.shiftKey && event.key === 'Shift') {
+  } else if (!event.shiftKey && event.key === 'Shift' || event === 'up') {
     for (let i = 0; i < CaseUp.length; i += 1) {
       CaseUp[i].classList.add('hidden');
       CaseDown[i].classList.remove('hidden');
@@ -97,8 +103,6 @@ if (SetLanguage) {
 }
 
 document.addEventListener('keydown', (event) => {
-  console.log(event);
-  console.log(event.code);
   if (event.code === 'Tab') {
     event.preventDefault();
   }
@@ -111,8 +115,6 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('keyup', (event) => {
-  /* console.log(event.code); */
-  /* console.log(event); */
   const button = document.querySelector(`#${event.code}`);
   button.parentNode.parentNode.classList.remove('active');
   ShiftKey(event);
@@ -121,7 +123,11 @@ document.addEventListener('keyup', (event) => {
 
 const btns = document.querySelectorAll('.button-keyboard');
 btns.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('mousedown', (e) => {
     InnerText(e.target.id, e.target);
+    ShiftKey('down');
+  });
+  btn.addEventListener('mouseup', (e) => {
+    ShiftKey('up');
   });
 });
