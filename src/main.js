@@ -14,7 +14,7 @@ const SetLanguage = window.localStorage.getItem('language');
 
 function InnerText(event, button) {
   let Output = document.querySelector('.output-text');
-  const arr = ['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'ShiftLeft', 'ShiftRight', 'fn-button'];
+  const arr = ['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'ShiftLeft', 'ShiftRight', 'fn-button', 'ControlLeft', 'ControlRight', 'AltLeft', 'AltRight', 'MetaLeft', 'MetaRight'];
   for (let i = 0; i < arr.length; i += 1) {
     if (event.key === arr[i] || event === arr[i]) {
       return;
@@ -125,9 +125,19 @@ const btns = document.querySelectorAll('.button-keyboard');
 btns.forEach((btn) => {
   btn.addEventListener('mousedown', (e) => {
     InnerText(e.target.id, e.target);
-    ShiftKey('down');
+    if(e.target.id === 'ShiftLeft' || e.target.id === 'ShiftRight') {
+      ShiftKey('down');
+    }
+    if(e.target.id === 'CapsLock') {
+      for (let i = 0; i < CaseUp.length; i += 1) {
+        CapsLock[i].classList.toggle('hidden');
+        CaseDown[i].classList.toggle('hidden');
+      }
+    }
   });
   btn.addEventListener('mouseup', (e) => {
-    ShiftKey('up');
+    if(e.target.id === 'ShiftLeft' || e.target.id === 'ShiftRight') {
+      ShiftKey('up');
+    }
   });
 });

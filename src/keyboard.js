@@ -744,52 +744,52 @@ const Keyboard = `
       </div>
       <div class="button-keyboard left-arrow">
         <span class="ru">
-          <span class="case-down" id="ArrowLeft"></span>
-          <span class="case-up hidden" id="ArrowLeft"></span>
-          <span class="caps-lock hidden" id="ArrowLeft"></span>
+          <span class="case-down" id="ArrowLeft">&#8592;</span>
+          <span class="case-up hidden" id="ArrowLeft">&#8592;</span>
+          <span class="caps-lock hidden" id="ArrowLeft">&#8592;</span>
         </span>
         <span class="eng hidden">
-          <span class="case-down" id="ArrowLeft"></span>
-          <span class="case-up hidden" id="ArrowLeft"></span>
-          <span class="caps-lock hidden" id="ArrowLeft"></span>
+          <span class="case-down" id="ArrowLeft">&#8592;</span>
+          <span class="case-up hidden" id="ArrowLeft">&#8592;</span>
+          <span class="caps-lock hidden" id="ArrowLeft">&#8592;</span>
         </span>
       </div>
       <div class="flex-column">
         <div class="button-keyboard up-arrow">
           <span class="ru">
-            <span class="case-down" id="ArrowUp"></span>
-            <span class="case-up hidden" id="ArrowUp"></span>
-            <span class="caps-lock hidden" id="ArrowUp"></span>
+            <span class="case-down" id="ArrowUp">&#8593;</span>
+            <span class="case-up hidden" id="ArrowUp">&#8593;</span>
+            <span class="caps-lock hidden" id="ArrowUp">&#8593;</span>
           </span>
           <span class="eng hidden">
-            <span class="case-down" id="ArrowUp"></span>
-            <span class="case-up hidden" id="ArrowUp"></span>
-            <span class="caps-lock hidden" id="ArrowUp"></span>
+            <span class="case-down" id="ArrowUp">&#8593;</span>
+            <span class="case-up hidden" id="ArrowUp">&#8593;</span>
+            <span class="caps-lock hidden" id="ArrowUp">&#8593;</span>
           </span>
         </div>
         <div class="button-keyboard down-arrow">
           <span class="ru">
-            <span class="case-down" id="ArrowDown"></span>
-            <span class="case-up hidden" id="ArrowDown"></span>
-            <span class="caps-lock hidden" id="ArrowDown"></span>
+            <span class="case-down" id="ArrowDown">&#8595;</span>
+            <span class="case-up hidden" id="ArrowDown">&#8595;</span>
+            <span class="caps-lock hidden" id="ArrowDown">&#8595;</span>
           </span>
           <span class="eng hidden">
-            <span class="case-down" id="ArrowDown"></span>
-            <span class="case-up hidden" id="ArrowDown"></span>
-            <span class="caps-lock hidden" id="ArrowDown"></span>
+            <span class="case-down" id="ArrowDown">&#8595;</span>
+            <span class="case-up hidden" id="ArrowDown">&#8595;</span>
+            <span class="caps-lock hidden" id="ArrowDown">&#8595;</span>
           </span>
         </div>
       </div>
       <div class="button-keyboard right-arrow">
         <span class="ru">
-          <span class="case-down" id="ArrowRight"></span>
-          <span class="case-up hidden" id="ArrowRight"></span>
-          <span class="caps-lock hidden" id="ArrowRight"></span>
+          <span class="case-down" id="ArrowRight">&#8594;</span>
+          <span class="case-up hidden" id="ArrowRight">&#8594;</span>
+          <span class="caps-lock hidden" id="ArrowRight">&#8594;</span>
         </span>
         <span class="eng hidden">
-          <span class="case-down" id="ArrowRight"></span>
-          <span class="case-up hidden" id="ArrowRight"></span>
-          <span class="caps-lock hidden" id="ArrowRight"></span>
+          <span class="case-down" id="ArrowRight">&#8594;</span>
+          <span class="case-up hidden" id="ArrowRight">&#8594;</span>
+          <span class="caps-lock hidden" id="ArrowRight">&#8594;</span>
         </span>
       </div>
     </div>
