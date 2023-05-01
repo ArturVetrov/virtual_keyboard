@@ -1,0 +1,150 @@
+body {
+  background-color: #e8e8e8;
+}
+
+span {
+  width: 100%;
+  display: block;
+  min-height: 22px;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  /* visibility:hidden */
+  display: none;
+}
+
+.output-text {
+  width: 70vw;
+  height: 300px;
+  margin: 0 auto;
+  border: 3px solid;
+  display: block;
+  padding: 7px;
+  background-color: #fbfbfb;
+}
+
+.keyboard {
+  width: 389px;
+  margin: 67px auto;
+  background-color: #808080;
+  border: 3px solid #808080;
+  transform: scale(1.8);
+  caret-color: transparent;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-keyboard {
+  width: 24px;
+  height: 22px;
+  border: 0.5px solid;
+  border-radius: 2px;
+  background-color: #e6e6e6;
+  margin: 2px;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+}
+
+.button-keyboard:hover {
+  background-color: #656565;
+  color: #e6e6e6;
+  transition: 0.3s;
+}
+
+.button-keyboard:active {
+  background-color: #464646;
+  color: #fff;
+  transform: scale(0.85);
+  box-shadow: -1px 5px 38px 19px rgba(255, 255, 255, 0.62);
+  transition: 0.3s;
+}
+
+.active{
+  background-color: #333333;
+  color: #fff;
+  transform: scale(0.85);
+  box-shadow: -1px 5px 38px 19px rgba(255, 255, 255, 0.62);
+  transition: 0.3s;
+}
+
+
+.backspace {
+  padding: 1px;
+}
+
+.caps-lock-button,
+.right-shift {
+  width: 52px;
+}
+
+.caps-lock-button,
+.fn-button,
+.control-button,
+.option-button,
+.command-button {
+  font-size: 7px;
+}
+
+.fn-button,
+.control-button,
+.option-button,
+.command-button {
+  width: 34px;
+  padding: 1px;
+  margin-right: 2px;
+}
+
+.control-button {
+  background-image: url(../images/arrow-up.svg);
+  background-position: right 3px top 2px;
+  background-repeat: no-repeat;
+  background-size: 5px;
+}
+
+.option-button {
+  background-image: url(../images/keyboard-option.svg);
+  background-position: right -1px top -1px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+}
+
+.command-button {
+  background-image: url(../images/keyboard-command.svg);
+  background-position: right -1px top -1px;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+.space-button {
+  width: 101px;
+  margin-right: 2px;
+}
+
+.bottom-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.left-arrow,
+.up-arrow,
+.down-arrow,
+.right-arrow {
+  width: 25px;
+  height: 11px;
+  font-size: 9px;
+}
+
+.down-text {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+}
