@@ -1,0 +1,9 @@
+{
+  "name": "virtual_keyboard",
+  "devDependencies": {
+    "eslint": "^8.39.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0"
+  }
+}
